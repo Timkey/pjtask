@@ -17,6 +17,11 @@
 		{
 			$response = true;
 
+			if($this->value > 0)
+				$response = true;
+			else
+				$response = false;
+
 			return $response;
 		}
 
@@ -24,13 +29,34 @@
 		{
 			$response = true;
 
+			$tmp = explode('@', $this->value);
+
+			if (count($tmp) == 2)
+			{
+				$tmp = explode('.', $tmp[1]);
+				
+				if(count($tmp) > 1)
+				{
+					$response = true;
+				}
+				else
+				{
+					$response = false;
+				}
+
+			}
+			else
+			{
+				$response = false;
+			}
+
 			return $response;			
 		}
 
 		public function isString()
 		{
 
-			$response = true;
+			$response = is_string($this->value);
 
 			return $response;
 		}
@@ -112,7 +138,8 @@
 
 				if($n == $name and $p == $phone and $e == $email)
 				{
-					$this->store = array_diff($this->store, $value);
+					#$this->store = array_diff($this->store, $value);
+					unset($this->store[$key]);
 					$found = true;
 				}
 			}
@@ -122,6 +149,8 @@
 				$tmp['message'] = "Item Was not found in store";
 				$tmp['alert'] = "danger";
 			}
+
+			#var_dump($this->store);
 
 			$this->refreshFileStore();
 
