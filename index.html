@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>NetPay Task</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</head>
+	<body class="container">
+		
+		<div class="row" id="mainDock">
+
+			<div class="col-md-4">
+				<hr />
+				<h2>Directory Search</h2>
+				<div class="card border-info">
+					<div class="card-body">
+						<div role="form">
+							<input class="form-control form-control-lg" type="text" id="searchBar" onchange="search();" placeholder="Find Your File(s)"><br/>
+							<button class="btn btn-lg btn-outline-primary" onclick="search();">Search</button><hr/>
+						</div>
+						<div id="searchDock"></div>
+					</div>
+					<div class="card-footer"><h3>Task One</h3></div>
+				</div>
+			</div>
+
+			<div class="col-md-8">
+				<hr />
+				<h2>Forms Operations</h2>
+				<div class="card border-info">
+					<div class="card-body">
+
+						<div class="row">
+
+							<div class="col-md-8">
+								<h2>Multi Contact Form</h2>
+							</div>
+
+							<div class="col-md-4">
+								<button class="btn btn-lg btn-outline-secondary" onclick="newContact();">Add Contact</button>
+								<button class="btn btn-lg btn-outline-secondary" onclick="validate();">Validate</button>
+								<button class="btn btn-lg btn-outline-secondary" onclick="save();">Save</button>
+							</div>
+
+						</div>
+
+						<hr />
+
+						<div class="row">
+							
+							<div class="col-md-6">
+
+								<div class="row">
+									<div class="col-md-12">
+										<h3>Contact</h3>
+									</div>
+								</div>
+								<hr />
+
+								<div role="form" class="form-horizontal">
+									
+									<div class="row form-group">
+										<label class="control-label control-label-lg col-md-4">Name:</label>
+										<div class="col-md-8">
+											<input class="form-control form-control-lg" type="text" id='name'>
+										</div>
+									</div>
+									<div id='nameDock'></div>
+									
+									<div class="row form-group">
+										<label class="control-label control-label-lg col-md-4">Email:</label>
+										<div class="col-md-8">
+											<input class="form-control form-control-lg" type="text" id='email'>
+										</div>
+									</div>
+									<div id='emailDock'></div>
+									
+									<div class="row form-group">
+										<label class="control-label control-label-lg col-md-4">Phone Number:</label>
+										<div class="col-md-8">
+											<input class="form-control form-control-lg" type="text" id='phone'>
+										</div>
+									</div>
+									<div id='phoneDock'></div>
+								
+								</div>
+								<hr />
+
+								<div id='formMessage'></div>
+
+							</div>
+
+							<div class="col-md-6">
+
+								<div class="row">
+
+									<div class="col-md-7">
+										<h3>Contact</h3>
+									</div>
+									<div class="col-md-5">
+										<button class="btn btn-outline-secondary" onclick="remove();">Remove</button>
+									</div>
+
+								</div>
+								<hr />
+								
+								<div role="form" class="form-horizontal">
+									
+									<div class="row form-group">
+										<label class="control-label control-label-lg col-md-4">Name:</label>
+										<div class="col-md-8">
+											<input class="form-control form-control-lg" type="text" id='nameD' readonly>
+										</div>
+									</div>
+									
+									<div class="row form-group">
+										<label class="control-label control-label-lg col-md-4">Email:</label>
+										<div class="col-md-8">
+											<input class="form-control form-control-lg" type="text" id='emailD' readonly>
+										</div>
+									</div>
+									
+									<div class="row form-group">
+										<label class="control-label control-label-lg col-md-4">Phone Number:</label>
+										<div class="col-md-8">
+											<input class="form-control form-control-lg" type="text" id='phoneD' readonly>
+										</div>
+									</div>
+								
+								</div>
+								<hr />
+
+								<div id='formEditDock'></div>
+
+							</div>
+
+						</div>
+
+					</div>
+					<div class="card-footer"><h3>Task Two</h3></div>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+	<script type="text/javascript" src="js/xlock.js"></script>
+	<script type="text/javascript" src="js/t1.js"></script>
+	<script type="text/javascript" src="js/t2.js"></script>
+</html>

@@ -1,0 +1,10 @@
+c:/Documents/Images/Image1.jpg
+c:/Documents/Images/Image2.jpg
+c:/Documents/Images/Image3.jpg
+c:/Documents/Works/Letter.doc
+c:/Documents/Works/Accountant/Accounting.xls
+c:/Documents/Works/Accountant/AnualReport.xls
+D:/Program Files/Skype/Skype.exe
+D:/Program Files/Skype/Readme.txt
+D:/Program Files/Mysql/Mysql.exe
+D:/Program Files/Mysql/Mysql.com
