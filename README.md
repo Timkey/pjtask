@@ -16,7 +16,14 @@ There are two classes built in the conn.php file. Bridge is the class that inter
 
 The test.php can be executed from the terminal using "php test.php". Uncomment the $cnt->logContent('db') instance to generate a list of your choosing in the database of your choosing.
 
-###
+### web interface
+To run and see the results of this project, deploy this repository inside the web root of the Apache server. It could be htdocs for Windows and /var/www/html folder on Linux.
+The search interface is based on html and JavaScript. Interaction with the database is performed over an api as defined on api.php.
+The web interface in question is defined in index.html. The same interface also includes the second task which is discussed in the next section, Form Validation.
   
 
 ## Form Validation
+As long as the Apache server is running, this app can be reached over the IP address of the host server or local host address. The results of this task are saved in a text file called store.json. Ensure this file is writable by the Apache server user. On Linux "chmod 777 store.json" does it.
+The layout of the app uses bootstrap without any custom css. Index.html contains all the markup code for both tasks. The main JavaScript libraries, especially those shared by both tasks are stored under js/xlock.js . t1.js contains the js code for task one and t2.js for task two.
+
+The backend of the second task is defined in form.php. This file contains two classes. The Store class and validation class.
